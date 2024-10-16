@@ -1,19 +1,27 @@
 package com.javaacademy;
 
+import lombok.*;
+
 /**
  * Город
  */
+@AllArgsConstructor
+@Getter
+@ToString
 public class City {
+    @NonNull
     public final String name;
+    @Setter
+    @ToString.Exclude
     public int peopleCount;
 
-    public City(String name, Integer peopleCount) {
-        if (name == null) {
-            throw new NullPointerException("name is marked non-null, but is null");
-        }
-        this.name = name;
-        this.peopleCount = peopleCount;
-    }
+//    public City(String name, Integer peopleCount) {
+//        if (name == null) {
+//            throw new NullPointerException("name is marked non-null, but is null");
+//        }
+//        this.name = name;
+//        this.peopleCount = peopleCount;
+//    }
 
     public Garbage[] createGarbage() {
         return new Garbage[] {
@@ -23,23 +31,23 @@ public class City {
         };
     }
 
-    public String getName() {
-        return name;
-    }
+//    public String getName() {
+//        return name;
+//    }
+//
+//    public Integer getPeopleCount() {
+//        return peopleCount;
+//    }
 
-    public Integer getPeopleCount() {
-        return peopleCount;
-    }
+//    public void setPeopleCount(Integer peopleCount) {
+//        this.peopleCount = peopleCount;
+//    }
 
-    public void setPeopleCount(Integer peopleCount) {
-        this.peopleCount = peopleCount;
-    }
-
-    //Внимание, только город выводится на экран
-    @Override
-    public String toString() {
-        return "City{" +
-                "name='" + name + '\'' +
-                '}';
-    }
+//    //Внимание, только город выводится на экран
+//    @Override
+//    public String toString() {
+//        return "City{" +
+//                "name='" + name + '\'' +
+//                '}';
+//    }
 }

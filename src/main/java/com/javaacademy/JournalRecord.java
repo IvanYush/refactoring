@@ -1,5 +1,9 @@
 package com.javaacademy;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+
+
 public class JournalRecord {
     private double garbageWeight;
     private Bottle bottle;
